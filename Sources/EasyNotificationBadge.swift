@@ -254,5 +254,11 @@ public struct BadgeAppearance {
         distanceFromCenterY = 0
         distanceFromCenterX = 0
     }
+    
+    public init(textFont: UIFont) {
+        self.init()
+        
+        self.textFont = textFont
+    }
 
 }
