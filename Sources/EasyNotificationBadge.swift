@@ -93,7 +93,7 @@ extension UIView {
         badgeLabel.text = badgeText
 
         //Set font size
-        badgeLabel.font = UIFont.systemFont(ofSize: appearance.textSize)
+        badgeLabel.font = appearance.textFont
 
         badgeLabel.sizeToFit()
 
@@ -229,6 +229,7 @@ extension UIBarButtonItem {
 public struct BadgeAppearance {
     public var textSize: CGFloat
     public var textAlignment: NSTextAlignment
+    public var textFont: UIFont
     public var borderColor: UIColor
     public var borderWidth: CGFloat
     public var allowShadow: Bool
@@ -242,6 +243,7 @@ public struct BadgeAppearance {
     public init() {
         textSize = 12
         textAlignment = .center
+        textFont = UIFont.systemFont(ofSize: textSize)
         backgroundColor = .red
         textColor = .white
         animate = true
