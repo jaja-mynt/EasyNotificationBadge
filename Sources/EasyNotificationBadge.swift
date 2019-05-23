@@ -15,11 +15,7 @@ extension UIView {
 
     /// - parameter text: The badge value, use nil to remove exsiting badge.
     @objc public func badge(text badgeText: String?) {
-        
-        let karlaFont = UIFont(name: "Karla-Regular", size: 10.0)!
-        let appearance = BadgeAppearance(textFont: karlaFont)
-        
-        badge(text: badgeText, appearance: appearance)
+        badge(text: badgeText, appearance: BadgeAppearance())
     }
 
     /// - parameter text: The badge value, use nil to remove exsiting badge.
